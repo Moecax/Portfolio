@@ -77,7 +77,12 @@ body[data-nav="true"] > nav > #nav-links {
   left: 50%;
   bottom: 3rem;
   transform: translateX(-50%);
-  background-color: #d95116;
+  /* background-color: #d95116; */
+  background: linear-gradient(
+    90deg,
+    hsla(18, 82%, 47%, 1) 0%,
+    hsla(18, 100%, 70%, 1) 100%
+  );
   border: none;
   border-radius: 5rem;
   outline: none;
@@ -180,7 +185,6 @@ body[data-nav="true"] > #nav-toggle > .close {
 
 .greetings {
   color: #ffffff;
-  top: 60px;
   align-items: center;
   /* backdrop-filter: blur(3px);
   background-color: hsla(211, 100%, 28%, 1);
@@ -189,14 +193,35 @@ body[data-nav="true"] > #nav-toggle > .close {
   cursor: pointer;
   display: inline-flex; */
   /* gap: 5px; */
-  left: 50px;
   padding: 10px 20px;
   position: absolute;
-  /* text-decoration: none; */
+  top: 20%;
+  left: 20%;
   transition: background-color 350ms, border-color 350ms;
   z-index: 10000;
   font-size: 20px;
   font-family: "IBM Plex Mono", monospace;
+}
+.content {
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  color: #d0d2f4;
+  padding: 15px 20px;
+  z-index: 100;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  font-size: 65px;
+}
+.content > span {
+  /* color: #d95116; */
+  background: linear-gradient(
+    90deg,
+    hsla(18, 82%, 47%, 1) 0%,
+    hsla(18, 100%, 70%, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .logo {
@@ -204,8 +229,8 @@ body[data-nav="true"] > #nav-toggle > .close {
   top: 30px;
   left: 30px;
   z-index: 100;
-  height: 40px;
-  width: 40px;
+  height: 100px;
+  width: 100px;
 }
 
 /* Mouse Trailer Styles */
