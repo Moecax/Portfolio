@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
   background: linear-gradient(
@@ -10,7 +11,6 @@ body {
     hsla(236, 100%, 8%, 1) 0%,
     hsla(221, 100%, 5%, 1) 100%
   );
-  scroll-behavior: smooth;
 }
 
 /* ==========Nav=========== */
@@ -54,7 +54,7 @@ nav > .nav-cta {
   align-items: center;
   margin-right: 15px;
   padding-left: 15px;
-  color: red;
+  color: #35367e;
   text-decoration: none;
   border-radius: 8px;
   transition: 0.5s ease;
@@ -62,14 +62,15 @@ nav > .nav-cta {
   font-size: 20px;
 }
 nav > .nav-cta:hover {
-  color: #e0668f;
+  /* color: #e0668f; */
+  color: #35367e;
 }
 
 /* ==========End Nav=========== */
 
 /* ==========Main Section=========== */
 .main-section {
-  height: 100vh;
+  height: 95vh;
   width: auto;
   color: white;
 }
@@ -84,12 +85,19 @@ nav > .nav-cta:hover {
   font-weight: 600;
   font-size: 35px;
   color: hsl(240, 100%, 97%);
+  animation-name: slide-up;
+  animation-duration: 0.5s;
+}
+.greeting > span {
+  color: red;
 }
 .message {
   font-family: "open sans", sans-serif;
   font-weight: 900;
   font-size: 70px;
   color: hsl(236, 100%, 90%);
+  animation-name: slide-up;
+  animation-duration: 0.8s;
 }
 .message > span {
   color: red;
@@ -103,7 +111,7 @@ nav > .nav-cta:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40vh;
+  height: 50vh;
   /* background: #effafd; */
   background-color: hsl(236, 100%, 8%);
 }
@@ -112,7 +120,8 @@ nav > .nav-cta:hover {
   background: hsl(236, 100%, 90%);
   border-radius: 8px;
   padding: 50px 50px;
-  width: 90%;
+
+  width: 100%;
   text-align: center;
   color: hsl(221, 100%, 5%);
   box-shadow: 0px 16px 40px -3px rgba(204, 207, 255, 0.1);
@@ -121,12 +130,16 @@ nav > .nav-cta:hover {
   font-family: "poppins", sans-serif;
   font-weight: 900;
   font-size: 30px;
+  animation-name: slide-up;
+  animation-duration: 0.5s;
 }
 .about-me-card > p {
   font-family: "open sans", sans-serif;
   font-weight: 600;
   font-size: 20px;
-  margin-top: 10px;
+  margin-top: 15px;
+  animation-name: slide-up;
+  animation-duration: 0.8s;
 }
 
 /* ==========Divider=========== */
@@ -169,7 +182,7 @@ nav > .nav-cta:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 35vh;
+  height: 50vh;
 }
 .grid-container {
   display: grid;
@@ -223,20 +236,22 @@ nav > .nav-cta:hover {
   font-family: "poppins", sans-serif;
   font-weight: 900;
   font-size: 30px;
-  margin-top: 15px;
+  margin-top: 35px;
+  margin-bottom: 25px;
 }
 /* ==========Previous work Section=========== */
 .previous-work-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 35vh; */
   margin-top: 10px;
+  margin-bottom: 50px;
 }
 .card-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 30px;
+  width: 90%;
 }
 
 /* Style individual cards */
@@ -247,13 +262,117 @@ nav > .nav-cta:hover {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  color: hsl(221, 100%, 5%);
   box-shadow: 0px 16px 40px -3px rgba(204, 207, 255, 0.1);
 }
+.card a {
+  text-decoration: none;
+  color: hsl(221, 100%, 5%);
+  transition: all 0.5s ease;
+}
+.card a :hover {
+  color: hsl(221, 100%, 25%);
+}
+.card h2 {
+  font-family: "poppins", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  margin-left: 20px;
+}
+.card p {
+  font-family: "open sans", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.card i {
+  font-size: 15px;
+  font-weight: 700;
+}
+/* ==========End previousWork Section=========== */
+.contact-me-title {
+  color: #c6eff7;
+  align-items: center;
+  text-align: center;
+  font-family: "poppins", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  margin-top: 45px;
+  margin-bottom: 35px;
+}
+.contact-me-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+/* ==========Contact me form section=========== */
 
-/* Style card images (adjust size as needed) */
+/* ==========end form contact me section=========== */
 .card img {
   width: 200px;
   height: auto;
+  border-radius: 8px;
+}
+
+form {
+  background: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  border: 0.5px solid #cccfff;
+  margin-bottom: 70px;
+  width: 700px;
+
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border-radius: 10px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  color: #cccfff;
+  font-family: "open sans", sans-serif;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  border: none;
+  border-bottom: 0.5px solid #cccfff;
+  border-radius: 3px;
+  background: transparent;
+  font-family: "open sans", sans-serif;
+  font-weight: 600;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: red;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: "open sans", sans-serif;
+  font-weight: 600;
+  width: 100%;
+}
+
+.form-submit:hover {
+  background-color: hsl(0, 100%, 65%);
 }
 
 /* ==========End Work Section=========== */
@@ -265,4 +384,108 @@ nav > .nav-cta:hover {
   .card-grid {
     grid-template-columns: 1fr;
   }
+  nav {
+    display: none;
+  }
+  .main-section {
+    height: 80vh;
+    margin-left: 10px;
+  }
+  .message {
+    font-weight: 800;
+    font-size: 40px;
+    margin-top: 10px;
+  }
+  .custom-shape-divider-bottom-1698161924 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .custom-shape-divider-bottom-1698161924 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+    display: none;
+  }
+
+  .custom-shape-divider-bottom-1698191087 .shape-fill {
+    fill: hsl(236, 100%, 8%);
+  }
+  .services-title {
+    margin-bottom: 10px;
+    font-weight: 800;
+    font-size: 25px;
+  }
+  .services-section {
+    height: auto;
+  }
+  .grid-item > i {
+    font-size: 25px;
+  }
+  .grid-container {
+    margin-bottom: 10px;
+  }
+  .previous-work-title {
+    font-weight: 800;
+    font-size: 25px;
+  }
+  .card-grid {
+    width: auto;
+  }
+  .contact-me-title {
+    font-weight: 800;
+    font-size: 25px;
+  }
+  form {
+    max-width: fit-content;
+  }
 }
+
+/* @-webkit-keyframes slide-up {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-up {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} */

@@ -18,16 +18,16 @@
     <nav>
       <img src="/Assets/MK logo.png" alt="Logo" />
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Me</a></li>
-        <li><a href="#">Previous Work</a></li>
-        <li><a href="#">Contact me</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#works">Previous Work</a></li>
+        <li><a href="#contact">Contact me</a></li>
       </ul>
       <a href="#" class="nav-cta">Hire Me</a>
     </nav>
-    <section class="main-section">
+    <section class="main-section" id="home">
       <div class="main-section-content">
-        <div class="greeting">Hello, I'm Moe</div>
+        <div class="greeting">Hello, I'm <span>Moe</span></div>
         <div class="message">
           I create beautiful <br />
           and innovative solutions<span>.</span>
@@ -49,7 +49,7 @@
       </svg>
     </div>
 
-    <section class="about-me-section">
+    <section class="about-me-section" id="about-me">
       <div class="about-me-card">
         <h2>About Me</h2>
         <p>
@@ -63,23 +63,25 @@
       <div class="grid-container">
         <div class="grid-item">
           <i class="fa-solid fa-code" style="color: #cccfff"></i>
-          <h2>Software Development</h2>
-          <p>You</p>
+          <h2>Product Development</h2>
+          <p>
+            I develop and ship products that meet the clients specifications
+          </p>
         </div>
 
         <div class="grid-item">
           <i class="fa-solid fa-pen-fancy" style="color: #cccfff"></i>
-          <h2>Software Design</h2>
+          <h2>Product Design</h2>
           <p>
-            Icans write djsdhjsdjahkhafkjahfuiyfru kjhfiurhfiaufh kafyhirfah
+            I give your ideas life from a basic wireframe to complex prototypes.
           </p>
         </div>
 
         <div class="grid-item">
           <i class="fa-solid fa-bug-slash" style="color: #cccfff"></i>
-          <h2>Media Development</h2>
+          <h2>Software support</h2>
           <p>
-            Icans write djsdhjsdjahkhafkjahfuiyfru kjhfiurhfiaufh kafyhirfah
+            I troubleshoot and offer level one support for various products.
           </p>
         </div>
       </div>
@@ -99,50 +101,88 @@
       </svg>
     </div>
 
-    <h2 class="previous-work-title">My Previous Works</h2>
+    <h2 class="previous-work-title" id="works">My Previous Works</h2>
     <section class="previous-work-section">
       <div class="card-grid">
         <div class="card">
-          <img src="/Assets/E-tiba cropped.png" alt="Image 1" />
+          <img src="/Assets/E-tiba_cropped.png" alt="E-tiba" />
           <div class="card-content">
-            <h2>E-tiba</h2>
+            <a href="https://etiba.co.ke/" target="_blank">
+              <h2>
+                E-tiba
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </h2>
+            </a>
             <p>
               A platform for connecting patients with healthcare experts at home
             </p>
           </div>
         </div>
         <div class="card">
-          <img src="/Assets/Marvel-Africa-Logo_Cropped.png" alt="Image 2" />
+          <img
+            src="/Assets/Marvel-Africa-Logo_Cropped.png"
+            alt="Marvel-Africa-Logo"
+          />
 
           <div class="card-content">
-            <h2>Marvel Africa</h2>
-            <p>
-              A platform for connecting patients with healthcare experts at home
-            </p>
+            <a href="https://marvelafrica.co.ke/" target="_blank">
+              <h2>
+                Marvel Africa
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </h2>
+            </a>
+            <p>An ecommerce website for tech and computing products</p>
           </div>
         </div>
         <div class="card">
-          <img src="/Assets/Marvel-Africa-Logo_Cropped.png" alt="Image 2" />
+          <img src="/Assets/oz-logo cropped.webp" alt="ozmand imperium logo" />
 
           <div class="card-content">
-            <h2>Marvel Africa</h2>
-            <p>
-              A platform for connecting patients with healthcare experts at home
-            </p>
+            <a href="https://ozmandimperium.com/" target="_blank">
+              <h2>
+                Ozmand Imperium
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </h2>
+            </a>
+            <p>A website for a cleaning service provider</p>
           </div>
         </div>
 
         <div class="card">
-          <img src="/Assets/Marvel-Africa-Logo_Cropped.png" alt="Image 2" />
+          <img
+            src="/Assets/wholesalers logo cropped.jpg"
+            alt="Wholesalers logo"
+          />
 
           <div class="card-content">
-            <h2>Marvel Africa</h2>
-            <p>
-              A platform for connecting patients with healthcare experts at home
-            </p>
+            <a href="https://wholesalers.co.ke/" target="_blank">
+              <h2>
+                Wholesalers
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </h2>
+            </a>
+            <p>A multivendor ecommerce website</p>
           </div>
         </div>
       </div>
+    </section>
+    <h2 class="contact-me-title">Contact Me</h2>
+    <section class="contact-me-section" id="contact">
+      <form action="https://formspree.io/f/mbjvwale" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit" class="form-submit">Submit</button>
+      </form>
     </section>
   </body>
 </html>
